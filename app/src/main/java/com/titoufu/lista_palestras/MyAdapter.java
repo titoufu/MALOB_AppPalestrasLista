@@ -44,8 +44,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Myviewholder> {
         holder.nomeOrador.setText(news.oradorPalestra);
         holder.nomeAno.setText(news.anoPalestra);
         holder.nomeTema.setText(news.temaPalestra);
+        holder.nomeReferencia.setText(news.referenciaPalestra);
         holder.nomeSemana.setText(news.semanaPalestra);
-
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -57,7 +57,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Myviewholder> {
     public static class Myviewholder extends RecyclerView.ViewHolder {
         // elementos da lista
         //
-        TextView nomeTema, nomeOrador, nomeAno, nomeData,nomeSemana;
+        TextView nomeTema, nomeOrador, nomeAno, nomeData,nomeSemana, nomeReferencia;
 
         public Myviewholder(@NonNull View itemView) {
             super(itemView);
@@ -66,6 +66,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Myviewholder> {
             nomeData = itemView.findViewById(R.id.id_campoAno);
             nomeTema = itemView.findViewById(R.id.id_campoTema);
             nomeSemana=itemView.findViewById(R.id.id_diaSemana);
+            nomeReferencia=itemView.findViewById(R.id.id_campoReferencia);
 
         }
     }

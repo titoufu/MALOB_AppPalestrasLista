@@ -1,5 +1,7 @@
 package com.titoufu.lista_palestras;
 
+import static com.titoufu.lista_palestras.R.color.azulEscuro;
+import static java.lang.Integer.getInteger;
 import static java.lang.Integer.parseInt;
 
 import androidx.annotation.NonNull;
@@ -35,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<News> newsArrayList;
     MyAdapter myAdapter;
     RelativeLayout relativeLayout;
-    private int numList[] = {4, 10, 20};
+    private final int[] numList = {4, 10, 20};
     private boolean firstTime = true;
-    private String titulo[] = {"PALESTRAS DA SEMANA",
+    private final String[] titulo = {"PALESTRAS DA SEMANA",
             "PALESTRAS DO MÊS",
             "PALESTRAS DO BIMESTRE"};
-    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.id_recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        newsArrayList = new ArrayList<News>();
+        newsArrayList = new ArrayList<>();
         myAdapter = new MyAdapter(this, newsArrayList);
         recyclerView.setAdapter(myAdapter);
         customizaActionBar(titulo[0]);
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                         News news = new News(palestra.getData().substring(6, 10),
                                 palestra.getData().substring(0, 5),
                                 "(" + palestra.getOrador() + ")",
-                                palestra.getTema(),diaSemana);
+                                '\u0022' +palestra.getTema()+ '\u0022' , palestra.getReferencia(), diaSemana);
                         newsArrayList.add(news);
                         i++;
                     }
@@ -124,7 +125,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void customizaActionBar(String tituloActionBar) {
         final ActionBar actionBar = getSupportActionBar();
-        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor(getResources().getString(R.color.azulEscuro))));
+      //  actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor(getResources().getString(R.color.azulEscuro))));
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor( "#FF3F8EFF")));
         // abar.setBackgroundDrawable(getResources().getDrawable(R.drawable.));//line under the action bar
         View viewActionBar = getLayoutInflater().inflate(R.layout.custom_action_bar, null);
         ActionBar.LayoutParams params = new ActionBar.LayoutParams(

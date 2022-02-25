@@ -4,5 +4,18 @@
     <string name="mensal">Mês</string>
     <string name="semanal">Semana</string>
     <string name="lar_esp_rita_maria_lobato_de_freitas">LAR ESPÍRITA MARIA LOBATO DE FREITAS</string>
+    <string name="_20_10">20/10</string>
+    <string name="domingo">DOMINGO</string>
+    <string name="_2010">2010</string>
+    <string name="tema_da_palestra">Tema da Palestra</string>
+    <string name="fulano_de_tal">(Fulano de Tal )</string>
+    <string name="refer">Ref.:</string>
+    <string name="referencia">(Referencia )</string>
+    <string name="_10_04">10/04</string>
+    <string name="quarta">QUARTA</string>
+    <string name="title">Title</string>
+    <string name="jos_francisco">José Francisco</string>
+    <string name="livro_dos_esp_ritos_perg_1088_boa_nova_cap_23">Livro dos Espíritos, perg. 1088,: Boa Nova, cap.23</string>
+    <string name="_2022">2022</string>
 
 </resources>

@@ -6,9 +6,7 @@
         <item name="colorPrimaryVariant">@color/azulEscuro</item>
         <item name="colorOnPrimary">@color/azul</item>
         <!-- Secondary brand color. -->
-        <item name="colorPrimary">@color/azulClaro</item>
-        <item name="colorPrimaryVariant">@color/azulEscuro</item>
-        <item name="colorOnPrimary">@color/azul</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:fontFamily">@font/creteround_regular</item>

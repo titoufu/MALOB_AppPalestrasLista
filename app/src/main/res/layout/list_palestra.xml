@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/id_layoutItemMaster"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="240dp"
     android:layout_alignParentBottom="true"
     android:background="@color/common_google_signin_btn_text_dark_pressed">
 
@@ -11,11 +11,12 @@
         android:id="@+id/id_campoTema"
         android:layout_width="match_parent"
         android:layout_height="53dp"
-
         android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="6dp"
+        android:layout_marginBottom="5dp"
         android:layout_toEndOf="@id/id_campoAno"
-        android:background="@android:color/transparent"
+        android:background="@drawable/back"
         android:gravity="center"
         android:paddingTop="2dp"
         android:paddingBottom="2dp"
@@ -29,14 +30,13 @@
         android:id="@+id/id_campoOrador"
         android:layout_width="match_parent"
         android:layout_height="27dp"
-
         android:layout_alignStart="@+id/id_campoTema"
         android:layout_alignBottom="@+id/id_campoData"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="3dp"
-        android:background="@android:color/transparent"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/back"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:text="@string/fulano_de_tal"
@@ -46,24 +46,30 @@
 
     <TextView
         android:id="@+id/id_campoReferencia"
-        android:layout_width="match_parent"
+        android:layout_width="333dp"
 
-        android:layout_height="27dp"
-        android:layout_above="@+id/id_campoOrador"
+        android:layout_height="109dp"
         android:layout_below="@+id/id_campoTema"
+        android:layout_alignStart="@+id/id_campoTema"
+        android:layout_alignLeft="@id/id_diaSemana"
         android:layout_alignEnd="@+id/id_campoTema"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="0dp"
+        android:layout_alignBottom="@+id/id_diaSemana"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-4dp"
-        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginBottom="10dp"
         android:height="20dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/back"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/referencia"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textSize="14sp"
+        android:textSize="10sp"
         android:textStyle="italic" />
 
     <TextView
@@ -89,7 +95,6 @@
         android:id="@+id/id_diaSemana"
         android:layout_width="66dp"
         android:layout_height="14dp"
-        android:layout_alignEnd="@+id/Id_linhaHorizontalInterna"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="33dp"
@@ -130,51 +135,5 @@
         android:backgroundTint="@android:color/white"
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="parent" />
-
-    <View
-        android:id="@+id/Id_linhaHorizontalInterna"
-        android:layout_width="60dp"
-        android:layout_height="1dp"
-        android:layout_above="@id/id_campoAno"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="35dp"
-        android:background="@color/design_default_color_primary"
-        android:backgroundTint="@android:color/holo_red_dark"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="parent" />
-
-    <View
-        android:id="@+id/id_linhaVerticalInterna"
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="14dp"
-        android:background="@color/design_default_color_primary"
-        android:backgroundTint="@android:color/white" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="30dp"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/id_campoOrador"
-        android:layout_below="@+id/id_campoTema"
-        android:layout_alignStart="@+id/id_campoTema"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="-4dp"
-        android:gravity="start"
-        android:padding="3dp"
-        android:text="@string/refer"
-        android:textAlignment="textStart"
-        android:textColor="#670303"
-        android:textColorHint="#670303"
-        android:textSize="10sp"
-        android:textStyle="bold" />
 
 </RelativeLayout>
